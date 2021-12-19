@@ -1,14 +1,8 @@
 .App {
-  
-}
-
-.section {
-  width: 100vw;
-  height: 100vh;
   display: flex;
+  height: 100vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #333;
-  color: aqua;
+  text-align: center;
 }
