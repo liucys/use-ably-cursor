@@ -1,14 +1,6 @@
 // color
 export const getColor = () => {
-  const colors = [
-    "#f53b57",
-    "#3c40c6",
-    "#0fbcf9",
-    "#00d8d6",
-    "#05c46b",
-    "#ffd32a",
-    "#1e272e",
-  ];
+  const colors = ["#ff3838", "#fff200", "#7158e2", "#0652DD", "#3ae374"];
 
   return colors[Math.floor(Math.random() * colors.length)];
 };
@@ -20,4 +12,14 @@ export const uuid = () => {
       v = c == "x" ? r : (r & 0x3) | 0x8;
     return v.toString(16);
   });
+};
+
+export const debounce = (fn, delay) => {
+  let timer = null;
+  return function () {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      fn.apply(this, arguments);
+    }, delay);
+  };
 };
